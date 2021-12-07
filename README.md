@@ -6,4 +6,5 @@
 An internet gateway serves two purposes: to provide a target in your VPC route tables for internet-routable traffic, and to perform network address translation (NAT) for instances that have been assigned public IPv4 addresses.
 - VPC & Subnet Range: A virtual private cloud (VPC) is a secure, isolated private cloud hosted within a public cloud. VPC customers can run code, store data, host websites, and do anything else they could do in an ordinary private cloud, but the private cloud is hosted remotely by a public cloud provider. (Not all private clouds are hosted in this fashion.) VPCs combine the scalability and convenience of public cloud computing with the data isolation of private cloud computing. https://www.cloudflare.com/en-gb/learning/cloud/what-is-a-virtual-private-cloud/. A subnet, or subnetwork, is a segmented piece of a larger network. More specifically, subnets are a logical partition of an IP network into multiple, smaller network segments.
 - NACLs - Networking and Cryptography library - high-speed software library for network communication, encryption, decryption, signatures, etc
--
+
+![VPC Diagram](https://github.com/jo763/eng99-VPC/blob/main/VPC_diagram.PNG)
