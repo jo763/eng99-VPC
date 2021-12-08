@@ -28,3 +28,18 @@ An internet gateway serves two purposes: to provide a target in your VPC route t
 - for private portion, ensure it doesn't have internet access
 - Note IP addresses to each other are now private and not public
 - Change db_host environment vairable to reflect this
+
+# Creating NAT instance
+- Select Launch Instance from EC2 dashboard
+- Select AMI from AWS community (search "nat" and should be first result) i.e. amzn-ami-vpc-nat-2018.03.0.20200918.0-x86_64-ebs - ami-01ae0e01e7fffd105
+- t2. micro
+- select vpc, select subnet (public)
+- enable auto assign public IP
+- standard storage will do
+- add sensible name tag
+- disable/stop rescue request checks
+- edit route table to allow 0.0.0.0/0 for nat instance
+- add same security rule in the db sg
+- copy eng99.pem file from localhost to nat instance
+- sp or manually (i.e. copy contents and paste into nat instances)
+- ssh into db via nat instance
